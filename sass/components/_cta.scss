@@ -1,0 +1,49 @@
+@mixin flex() {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+$--header-padding: 62px;
+$--main-padding: 79px;
+$--footer-padding: 8.8rem;
+$--red: #f40009;
+$--black: #3c3b3b;
+$--white: #fff;
+$--gray: #6f7277;
+
+.none {
+    display: none;
+}
+
+.mobile-list {
+    display: none;
+}
+
+@mixin shake() {
+    animation-name: animation-shake;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-duration: 2s;
+}
+
+@keyframes animation-shake {
+    0% {
+        transform: rotate(0);
+    }
+    10% {
+        transform: rotate(-5deg);
+    }
+    25% {
+        transform: rotate(5deg);
+    }
+    50% {
+        transform: rotate(-5deg);
+    }
+    75% {
+        transform: rotate(5deg);
+    }
+    100% {
+        transform: rotate(0);
+    }
+}

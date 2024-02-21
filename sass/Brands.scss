@@ -1,0 +1,130 @@
+@import "./components/cta.scss";
+@import "./footer.scss";
+@import "./header.scss";
+
+* {
+   margin: 0;
+   padding: 0;
+}
+
+html {
+   font-size: 10px;
+}
+
+li {
+   list-style-type: none;
+}
+
+a {
+   color: #000;
+   text-decoration: none;
+}
+
+.main {
+   @include flex();
+   justify-content: center;
+   height: 1390px;
+   background: var(--coke-red-gradient-2, linear-gradient(8deg, #AC020E 0.68%, #B30411 12.99%, #BC0D14 28.82%, #CA161F 43.63%, #BC181F 57.68%, #AA141C 67.44%, #970A10 78.21%));
+
+   .brands-container {
+      padding: 0 23.2rem;
+
+      .brands {
+         .title {
+            text-align: center;
+            color: #fff;
+            font-family: "TCCC-UnityHeadline Medium";
+            font-size: 5.6rem;
+            font-weight: 700;
+            opacity: .8;
+         }
+
+         h3 {
+            text-align: center;
+            color: #fff;
+            font-family: Montserrat;
+            font-size: 2rem;
+            opacity: .65;
+         }
+
+         .brands-holder {
+            @include flex();
+            flex-wrap: wrap;
+            justify-content: center;
+
+            .card {
+               position: relative;
+               @include flex();
+               justify-content: center;
+               width: 256px;
+               height: 256px;
+               margin-inline: 1.6rem;
+               margin-top: 3.2rem;
+               background-color: #fafafa;
+               border-radius: 1.6rem;
+
+               &::before {
+                  content: '';
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  width: 100%;
+                  height: 100%;
+                  box-shadow: 0 14px 24px 0 rgba(0, 0, 0, .4);
+                  background-color: #fafafa;
+                  border-radius: 1.6rem;
+                  cursor: pointer;
+                  transition: .2s ease-out;
+               }
+
+               img {
+                  width: 192px;
+                  height: 192px;
+                  z-index: 0;
+                  cursor: pointer;
+
+                  &::selection {
+                     background: none;
+                  }
+               }
+            }
+         }
+      }
+   }
+}
+
+@media (hover: hover) {
+   .main {
+      .brands-container {
+         .brands {
+            .brands-holder {
+               .card {
+                  &:hover::before {
+                     transform: scale(1.08);
+                     box-shadow: 0 14px 24px 0 rgba(0, 0, 0, .6);
+                     border-radius: 2.4rem;
+                  }
+               }
+            }
+         }
+      }
+   }
+}
+
+@media (max-width: 1040px) {
+   .main {
+      .brands-container {
+         padding: 0 4.2rem;
+      }
+   }
+}
+
+@media (max-width: 360px) {
+   .main {
+      height: 2480px;
+
+      .brands-container {
+         padding: 0;
+      }
+   }
+}

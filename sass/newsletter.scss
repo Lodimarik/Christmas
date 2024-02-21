@@ -1,0 +1,290 @@
+@import "./components/cta.scss";
+@import "./footer.scss";
+@import "./header.scss";
+
+.main {
+    font-family: "TCCC-UnityHeadline Medium";
+
+    .newsletter-container {
+        height: 600rem;
+
+        background: var(
+            --coke-red-gradient-2,
+            linear-gradient(
+                8deg,
+                #ac020e 0.68%,
+                #b30411 12.99%,
+                #bc0d14 28.82%,
+                #ca161f 43.63%,
+                #bc181f 57.68%,
+                #aa141c 67.44%,
+                #970a10 78.21%
+            )
+        );
+
+        .newsletter {
+            padding-top: 30rem;
+            .news_container {
+                padding: 0rem 8rem;
+                .news-content {
+                    width: 100%;
+                    height: 70rem;
+
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    background-image: url(../img/bg/welcome-to-king-street.webp);
+                    background-size: cover;
+                    background-repeat: no-repeat;
+
+                    border-radius: 2.4rem;
+
+                    .title {
+                        font-size: 5.5rem;
+                        letter-spacing: 1px;
+                        color: $--white;
+                    }
+                }
+            }
+        }
+        .teaser-container {
+            padding: 0 20rem;
+            .teaser_about {
+                margin-bottom: 7rem;
+                margin-top: 5rem;
+                font-size: 2.4rem;
+                color: #fff;
+                .text-us {
+                    margin-top: 5rem;
+                }
+            }
+            .teaser_items {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                .teaser_card {
+                    width: 120rem;
+                    display: flex;
+                    margin-bottom: 20rem;
+                    .card_content {
+                        z-index: 1;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                        width: 45rem;
+                        height: 40rem;
+                        padding: 7rem;
+                        background-color: #f5dbdc;
+                        border: 5px solid #00c27a;
+                        border-radius: 1.6rem;
+                        .content-top {
+                            .title {
+                                font-size: 2.6rem;
+                                margin-bottom: 2rem;
+                            }
+                            .text {
+                                font-size: 1.8rem;
+                                font-family: Montserrat;
+                            }
+                        }
+                        .content-bottom {
+                            a {
+                                display: inline-block;
+
+                                padding: 1rem 9rem 1rem 2rem;
+
+                                border: 2px solid #000;
+                                border-radius: 4.8rem;
+
+                                font-size: 1.4rem;
+
+                                transition: 0.3s ease-in;
+                                &:hover {
+                                    color: $--gray;
+                                }
+                                &:active {
+                                    transform: scale(0.97);
+                                    -webkit-transform: scale(0.97);
+                                    -moz-transform: scale(0.97);
+                                    -ms-transform: scale(0.97);
+                                    -o-transform: scale(0.97);
+                                    color: $--gray;
+                                }
+                            }
+                        }
+                    }
+                    .card_image {
+                        position: relative;
+                        img {
+                            position: absolute;
+                            top: 8rem;
+                            left: -10rem;
+                            width: 70rem;
+                            height: 50rem;
+                            border-radius: 1.6rem;
+                            -webkit-border-radius: 1.6rem;
+                            -moz-border-radius: 1.6rem;
+                            -ms-border-radius: 1.6rem;
+                            -o-border-radius: 1.6rem;
+                        }
+                    }
+                }
+                .right {
+                    flex-direction: row-reverse;
+                    .card_image {
+                        img {
+                            left: -60rem;
+                        }
+                    }
+                }
+                .teaser_video {
+                    margin-bottom: 20rem;
+                    .video {
+                        width: 120rem;
+                        height: 60rem;
+                        border-radius: 1.6rem;
+                        -webkit-border-radius: 1.6rem;
+                        -moz-border-radius: 1.6rem;
+                        -ms-border-radius: 1.6rem;
+                        -o-border-radius: 1.6rem;
+                    }
+                }
+            }
+        }
+    }
+}
+@media (min-width: 1920px) {
+    .main {
+        .newsletter-container {
+            height: 620rem;
+            .teaser-container {
+                .teaser_items {
+                    .teaser_video {
+                        .video {
+                            height: 75rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 1440px) {
+    .main {
+        .newsletter-container {
+            .teaser-container {
+                padding: 0 12rem;
+            }
+        }
+    }
+}
+@media (max-width: 1040px) {
+    .main {
+        .newsletter-container {
+            height: auto;
+            .newsletter {
+                padding-top: 0;
+                .news_container {
+                    padding: 0;
+                    .news-content {
+                        border-radius: 0;
+                    }
+                }
+            }
+            .teaser-container {
+                padding: 0 5rem;
+                .teaser_about {
+                    font-size: 1.8rem;
+                    .text-us {
+                        margin-top: 2rem;
+                    }
+                }
+                .teaser_items {
+                    .teaser_card {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        width: 100vw;
+                        height: 118rem;
+                        .card_image {
+                            img {
+                                position: relative;
+                                top: -5rem;
+                                left: 0;
+                                width: 100vw;
+                                height: 70rem;
+                                border-radius: 0;
+                            }
+                        }
+                    }
+                    .teaser_video{
+                        .video{
+                            width: 90vw;
+                            height: 20vh;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 360px) {
+    .main{
+        .newsletter-container{
+            height: 500rem;
+            .newsletter{
+                .news_container{
+                    .news-content{
+                        background-position: 45%;
+                        .title{
+                            font-size: 3.2rem;
+                        }
+                    }
+                }
+            }
+            .teaser-container{
+                padding: 0 2rem;
+                .teaser_about{
+                    font-size: 1.6rem;
+                }
+                .teaser_items{
+                    .teaser_card{
+                        width: 100vw;
+                        height: 55rem;
+                        margin-bottom: 14rem;
+                        .card_content{
+                            width: 80vw;
+                            padding: 4rem 2rem;
+                            .content-top{
+                                .title{
+                                    font-size: 2rem;
+                                }
+                                .text{
+                                    font-size: 1.8rem;
+                                }
+                            }
+                            .content-bottom{
+                                a{
+                                    padding: 1rem;
+                                }
+                            }
+                        }
+                        .card_image{
+                            img{
+                                width: 100vw;
+                                height: 26rem;
+                            }
+                        }
+                    }
+                    .teaser_video{
+                        margin-bottom: 8rem;
+                        .video{
+                            height: 15rem;
+                        }
+                    }
+                }
+            }
+        }   
+    }
+}

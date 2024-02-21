@@ -1,0 +1,3 @@
+WSite: Christmas Cola
+by: DjLoly, Dmitry_dima, irl_lik
+Adaptives: 1900(1920) px; 1600px; 1440px; 1040px; 360(430) px
